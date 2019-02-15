@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+
+      <div class="column">
+        <h1 class="title">Add new post</h1>
+        <app-create-blog-entry [sibling]="blogList"></app-create-blog-entry>
+      </div>
+
+      <div class="column">
+        <h1 class="title">Your posts</h1>
+        <app-blog-post-list #blogList></app-blog-post-list>
+      </div>
+
+    </div>
+  </div>
+</section>

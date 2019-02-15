@@ -1,0 +1,17 @@
+<div class="content">
+
+  <div class="filter-container has-text-right">
+    <div class="select order-dropdown">
+      <select [(ngModel)]="selectedFilter" (ngModelChange)="fetchPosts()">
+        <option *ngFor="let filter of filters" [ngValue]="filter">{{ filter.label }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="blogPostsList.length === 0">No posts so far.</div>
+
+  <div class="field" *ngFor="let post of blogPostsList">
+    <app-blog-post [postData]="post"></app-blog-post>
+  </div>
+
+</div>
